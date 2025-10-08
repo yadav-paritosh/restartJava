@@ -32,9 +32,11 @@ class GroupAnagrams49 {
 
         char c='a';
         for(int i : freq){
-            freqStr.append(c);
-            freqStr.append(i);
-            c++;
+            if(i>0) {
+                freqStr.append(c);
+                freqStr.append(i);
+                c++;
+            }
         }
         return freqStr.toString();
     }
